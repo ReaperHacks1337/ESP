@@ -5,7 +5,7 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local RunService = game:GetService("RunService")
 local CoreGui = game:GetService("CoreGui")
-
+local printtshit = true
 -- Framework
 local Framework = {}; Framework.__index = Framework; do
     function Framework:Round_V2(V2)
@@ -318,6 +318,12 @@ do -- Player Metatable
                     local Box_Settings = ESP.Settings.Box
                     Box.Size = Box_Size
                     Box.Position = Box_Position
+                    if printtshit then
+                        print(self.Parent)
+                        print(self.Name)
+                        print(self.TeamColor.Color)
+                    end
+                    printtshit = false
                     Box.Color = self.TeamColor.Color
                     Box.Transparency = Framework:Drawing_Transparency(Box_Settings.Transparency)
                     Box.Visible = Box_Settings.Enabled
