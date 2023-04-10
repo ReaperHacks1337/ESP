@@ -318,14 +318,14 @@ do -- Player Metatable
                     local Box_Settings = ESP.Settings.Box
                     Box.Size = Box_Size
                     Box.Position = Box_Position
-                    Box.Color = Is_Highlighted and Highlight_Color or Color3.new(self.TeamColor.Color)
+                    Box.Color = Is_Highlighted and Highlight_Color or Box_Settings.Color
                     Box.Transparency = Framework:Drawing_Transparency(Box_Settings.Transparency)
                     Box.Visible = Box_Settings.Enabled
 
                     local Box_Outline_Settings = ESP.Settings.Box_Outline
                     Box_Outline.Size = Box_Size
                     Box_Outline.Position = Box_Position
-                    Box_Outline.Color = Color3.new(self.TeamColor.Color)
+                    Box_Outline.Color = Box_Outline_Settings.Color
                     Box_Outline.Thickness = Box_Outline_Settings.Outline_Size + 2
                     Box_Outline.Transparency = Framework:Drawing_Transparency(Box_Outline_Settings.Transparency)
                     Box_Outline.Visible = Box_Settings.Enabled and Box_Outline_Settings.Enabled or false
@@ -406,7 +406,7 @@ do -- Player Metatable
                         end
                         Right_Offset = Right_Offset + 10
                     end
-                    Name.Color = Is_Highlighted and Highlight_Color or Color3.new(self.TeamColor.Color)
+                    Name.Color = Is_Highlighted and Highlight_Color or Name_Settings.Color
                     Name.OutlineColor = Name_Settings.OutlineColor
                     Name.Transparency = Framework:Drawing_Transparency(Name_Settings.Transparency)
                     Name.Visible = Name_Settings.Enabled
