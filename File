@@ -317,7 +317,7 @@ do -- Player Metatable
                     local Box_Settings = ESP.Settings.Box
                     Box.Size = Box_Size
                     Box.Position = Box_Position
-                    Box.Color = self.Player.TeamColor.Color
+                    Box.Color = Is_Highlighted and Highlight_Color or Box_Settings.Color
                     Box.Transparency = Framework:Drawing_Transparency(Box_Settings.Transparency)
                     Box.Visible = Box_Settings.Enabled
 
